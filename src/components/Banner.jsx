@@ -21,7 +21,7 @@ const Banner = () => {
     fetchData();
   }, []);
 
-  console.log(movie);
+  // console.log(movie);
 
   const truncate = (str, n) => {        // this shortens the text of the description and adds ..
     return str?.length > n ? str.substr(0, n -1) + "..." : str;
@@ -45,7 +45,9 @@ const Banner = () => {
         <h1 className={classes.banner_description}>
           {truncate(movie?.overview, 150)}
         </h1>
-      </div>{" "}
+      </div>
+      <div className={classes.banner__fadebottom}></div>
+
     </header>
   );
 };
